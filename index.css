@@ -5,6 +5,18 @@
     border-collapse: collapse;
 }
 
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?ebd5xy');
+    src: url('fonts/icomoon.eot?ebd5xy#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ebd5xy') format('truetype'),
+        url('fonts/icomoon.woff?ebd5xy') format('woff'),
+        url('fonts/icomoon.svg?ebd5xy#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
 a {
     text-decoration: none;
 }
@@ -91,6 +103,23 @@ form {
     color: plum;
 }
 
+.font::after {
+    transition: color 1s;
+    font-family: 'icomoon';
+    content: '\e9d6';
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    cursor: pointer;
+    color: palevioletred;
+    font-size: 20px;
+}
+
+div.active .font::after {
+    content: '\e9d4';
+    color: lightpink;
+}
+
 .form-control input:focus,
 .form-control input:valid {
     border-bottom-color: lightcoral;
@@ -122,6 +151,7 @@ form {
     border-radius: 15px;
     cursor: pointer;
 }
+
 
 @media screen and (max-width:1200px) {
     .container {
@@ -180,22 +210,31 @@ form {
         bottom: -5vw;
     }
 
-    @media screen and (max-width:400px) {
-        form {
-            margin-top: 1vw;
-        }
+    .font::after {
+        right: 6vw;
+        font-size: 3vw;
+    }
+}
 
-        .container .btn {
-            bottom: -13vw;
-        }
+@media screen and (max-width:400px) {
+    form {
+        margin-top: 1vw;
+    }
 
-        .form-control label {
-            left: 20px;
-        }
+    .container .btn {
+        bottom: -13vw;
+    }
 
-        .form-control input:focus+label span,
-        .form-control input:valid+label span {
-            transform: translateY(-3vw);
-        }
+    .form-control label {
+        left: 20px;
+    }
+
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        transform: translateY(-3vw);
+    }
+
+    .font::after {
+        font-size: 4vw;
     }
 }
