@@ -5,26 +5,6 @@
     border-collapse: collapse;
 }
 
-@font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?ebd5xy');
-    src: url('../fonts/icomoon.eot?ebd5xy#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?ebd5xy') format('truetype'),
-        url('../fonts/icomoon.woff?ebd5xy') format('woff'),
-        url('../fonts/icomoon.svg?ebd5xy#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
-a {
-    text-decoration: none;
-}
-
-input {
-    outline: none;
-}
-
 body {
     display: flex;
     justify-content: center;
@@ -159,6 +139,21 @@ div.active .font::after {
     cursor: pointer;
 }
 
+.zc {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: lightseagreen;
+    font-size: 18px;
+    width: 80%;
+}
+
+.zc a {
+    color: lightcoral;
+}
+
 
 @media screen and (max-width:1200px) {
     .container {
@@ -214,11 +209,15 @@ div.active .font::after {
     .container .btn {
         padding: 2vw;
         font-size: 3vw;
-        bottom: -5vw;
+        bottom: -3.3vw;
     }
 
     .font::after {
         right: 6vw;
+        font-size: 3vw;
+    }
+
+    .zc {
         font-size: 3vw;
     }
 }
@@ -228,8 +227,17 @@ div.active .font::after {
         margin-top: 1vw;
     }
 
+    .form-control {
+        margin: 2vw 0;
+    }
+
     .container .btn {
-        bottom: -13vw;
+        bottom: -9vw;
+        font-size: 1vw;
+    }
+
+    .zc {
+        font-size: 1vw;
     }
 
     .form-control label {
