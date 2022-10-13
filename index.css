@@ -123,5 +123,79 @@ form {
     cursor: pointer;
 }
 
-/* @media screen and (max-width:800px) {
-} */
+@media screen and (max-width:1200px) {
+    .container {
+        width: 35vw;
+        height: 50vw;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: -10px;
+    }
+
+    from {
+        margin-top: 8vw;
+    }
+
+    .form-control {
+        margin: 0 0 8vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container {
+        width: 55vw;
+        height: 60vw;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    form {
+        margin-top: 4vw;
+    }
+
+    .form-control {
+        margin: 5vw 0;
+    }
+
+    .form-control input {
+        font-size: 1vw;
+    }
+
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        font-size: 2vw;
+    }
+
+    .form-control label span {
+        font-size: 4vw;
+    }
+
+    .container .btn {
+        padding: 2vw;
+        font-size: 3vw;
+        bottom: -5vw;
+    }
+
+    @media screen and (max-width:400px) {
+        form {
+            margin-top: 1vw;
+        }
+
+        .container .btn {
+            bottom: -13vw;
+        }
+
+        .form-control label {
+            left: 20px;
+        }
+
+        .form-control input:focus+label span,
+        .form-control input:valid+label span {
+            transform: translateY(-3vw);
+        }
+    }
+}
