@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    background-color: steelblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.project_previous,
+.project_next {
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 1vw;
+
+}
+
+.project_previous {
+    left: 1vw;
+}
+
+.project_next {
+    right: 1vw;
+}
+
+.project_next a,
+.project_previous a {
+    text-decoration: none;
+    color: #555;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px 40px;
+    border-radius: 15px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    color: lightblue;
+}
+
+.container .btn {
+    width: 100%;
+    background-color: lightblue;
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    border-bottom-color: lightblue;
+}
+
+.form-control label span {
+    display: inline-block;
+    cursor: auto;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
