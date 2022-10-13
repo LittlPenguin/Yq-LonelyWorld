@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?ebd5xy');
+    src: url('../fonts/icomoon.eot?ebd5xy#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?ebd5xy') format('truetype'),
+        url('../fonts/icomoon.woff?ebd5xy') format('woff'),
+        url('../fonts/icomoon.svg?ebd5xy#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: contain;
+    background: url(../images/bc-login.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    position: relative;
+    background: -webkit-linear-gradient(right bottom,
+            rgba(255, 255, 255, .7),
+            rgba(255, 255, 255, .5),
+            rgba(255, 255, 255, .4));
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px plum;
+}
+
+h1 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    text-align: center;
+    color: lightpink;
+}
+
+form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-control input {
+    height: 30px;
+    width: 80%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid rgb(143, 143, 143);
+    background-color: transparent;
+    font-size: 24px;
+    color: lightcoral;
+    text-indent: 5px;
+}
+
+.form-control label {
+    position: absolute;
+    top: -5px;
+    left: 40px;
+    color: plum;
+}
+
+.font::after {
+    transition: color 1s;
+    font-family: 'icomoon';
+    content: '\e9d6';
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    cursor: pointer;
+    color: palevioletred;
+    font-size: 20px;
+}
+
+div.active .font::after {
+    content: '\e9d4';
+    color: lightpink;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    border-bottom-color: lightcoral;
+}
+
+.form-control label span {
+    display: inline-block;
+    cursor: auto;
+    font-size: 26px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightcoral;
+    transform: translateY(-25px);
+    font-size: 20px;
+}
+
+.container .btn {
+    margin: 50px 0;
+    width: 80%;
+    background-color: lightsalmon;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1200px) {
+    .container {
+        width: 35vw;
+        height: 50vw;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: -10px;
+    }
+
+    from {
+        margin-top: 8vw;
+    }
+
+    .form-control {
+        margin: 0 0 8vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container {
+        width: 55vw;
+        height: 60vw;
+    }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    form {
+        margin-top: 4vw;
+    }
+
+    .form-control {
+        margin: 5vw 0;
+    }
+
+    .form-control input {
+        font-size: 1vw;
+    }
+
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        font-size: 2vw;
+    }
+
+    .form-control label span {
+        font-size: 4vw;
+    }
+
+    .container .btn {
+        padding: 2vw;
+        font-size: 3vw;
+        bottom: -5vw;
+    }
+
+    .font::after {
+        right: 6vw;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:400px) {
+    form {
+        margin-top: 1vw;
+    }
+
+    .container .btn {
+        bottom: -13vw;
+    }
+
+    .form-control label {
+        left: 20px;
+    }
+
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        transform: translateY(-3vw);
+    }
+
+    .font::after {
+        font-size: 4vw;
+    }
+}
