@@ -29,4 +29,19 @@ window.addEventListener("load", () => {
       location.assign("login.html");
     }
   });
+
+  // 可视化密码
+  var font = document.querySelector(".font");
+  var ctact = document.querySelectorAll(".form-control")[1];
+  var pasbtn = true;
+  font.addEventListener("click", () => {
+    ctact.classList.toggle("active");
+    if (pasbtn) {
+      pasbtn = false;
+      pas.setAttribute("type", "text");
+    } else {
+      pasbtn = true;
+      pas.setAttribute("type", "password");
+    }
+  });
 });
