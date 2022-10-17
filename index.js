@@ -49,8 +49,24 @@ window.addEventListener("load", () => {
   var zcmm = document.querySelectorAll('.container-register .form-control')
   btn[1].addEventListener('click', () => {
     if (zcmm[1].children[0].value != zcmm[2].children[0].value) {
-      alert('密码不一样')
+      for (var i = 1; i <= 2; i++) {
+        zcmm[i].children[0].value = '密码不一致'
+        zcmm[i].classList.add('active')
+        zcmm[i].children[0].setAttribute('type', 'text')
+      }
+
     }
   })
+  for (var i = 1; i <= 2; i++) {
+    zcmm[i].children[0].addEventListener('click', function () {
+      if (this.value == '密码不一致') {
+        for (var i = 1; i <= 2; i++) {
+          zcmm[i].children[0].value = ''
+          zcmm[i].children[0].setAttribute('type', 'password')
+          zcmm[i].classList.toggle('active')
+        }
+      }
+    })
+  }
 });
 
