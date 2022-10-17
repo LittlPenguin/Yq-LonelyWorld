@@ -19,30 +19,55 @@ window.addEventListener("load", () => {
   });
 
   //账号密码验证
-  var btn = document.querySelector(".btn");
-  var use = document.querySelector(".use");
-  var pas = document.querySelector(".pas");
+  var btn = document.querySelectorAll(".btn");
+  var use = document.querySelectorAll(".use");
+  var pas = document.querySelectorAll(".pas");
 
-  btn.addEventListener("click", function (e) {
-    if (use.value == "yq" && pas.value == "yq") {
+  btn[0].addEventListener("click", function (e) {
+    if (use[0].value == "yq" && pas[0].value == "yq") {
       e.preventDefault();
       location.assign("login.html");
     }
   });
 
   // 可视化密码
-  var font = document.querySelector(".font");
-  var ctact = document.querySelectorAll(".form-control")[1];
-  var pasbtn = true;
-  font.addEventListener("click", () => {
-    ctact.classList.toggle("active");
-    if (pasbtn) {
-      pasbtn = false;
-      pas.setAttribute("type", "text");
-    } else {
-      pasbtn = true;
-      pas.setAttribute("type", "password");
+  var fonts = document.querySelectorAll(".font");
+  var ctact = document.querySelectorAll(".form-control .pas");
+
+  fonts.forEach(function (font) {
+    font.addEventListener('click', function () {
+      font.parentElement.classList.toggle('active')
+      if (font.parentElement.classList == 'form-control active') {
+        font.parentElement.children[0].setAttribute('type', 'text')
+      } else {
+        font.parentElement.children[0].setAttribute('type', 'password')
+      }
+    })
+  })
+
+  // 注册密码
+  var zcmm = document.querySelectorAll('.container-register .form-control')
+  btn[1].addEventListener('click', () => {
+    if (zcmm[1].children[0].value != zcmm[2].children[0].value) {
+      for (var i = 1; i <= 2; i++) {
+        zcmm[i].children[0].value = '密码不一致'
+        zcmm[i].classList.add('active')
+        zcmm[i].children[0].setAttribute('type', 'text')
+      }
+
     }
-  });
+  })
+  // 密码一致清除
+  for (var i = 1; i <= 2; i++) {
+    zcmm[i].children[0].addEventListener('click', function () {
+      if (this.value == '密码不一致') {
+        for (var i = 1; i <= 2; i++) {
+          zcmm[i].children[0].value = ''
+          zcmm[i].children[0].setAttribute('type', 'password')
+          zcmm[i].classList.toggle('active')
+        }
+      }
+    })
+  }
 });
 
