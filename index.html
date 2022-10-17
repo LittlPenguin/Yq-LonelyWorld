@@ -26,9 +26,44 @@
             </div>
             <button class="btn">Login</button>
         </form>
-        <div class="zc">是不是还没注册？<a href="register.html">点这!</a></div>
+        <div class="zc">是不是还没注册？<a href="javascript:">点这!</a></div>
+    </div>
+
+    <div class="container-register">
+        <h1>Please Register</h1>
+        <form>
+            <div class="form-control">
+                <input type="text" required="required" class="use" title="">
+                <label>User</label>
+            </div>
+            <div class="form-control">
+                <input type="password" required="required" class="pas" title="">
+                <label>Password</label>
+                <div class="font"></div>
+            </div>
+            <div class="form-control">
+                <input type="password" required="required" class="pas" title="">
+                <label>Password</label>
+                <div class="font"></div>
+            </div>
+            <button class="btn">Register</button>
+        </form>
+        <div class="zc">好了就<a href="javascript:">Login</a></div>
     </div>
 </body>
+<script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+    $(() => {
+        $('.zc').eq(0).children('a').click(function () {
+            $('.container').css('transform', 'translateY(-2500px)')
+            $('.container-register').show().css('transform', `translateY(0px)`)
+        })
+        $('.zc').eq(1).children('a').click(() => {
+            $('.container').css('transform', 'translateY(0px)')
+            $('.container-register').show().css('transform', `translateY(-2500px)`)
+        })
+    });
+</script>
 
 </html>
