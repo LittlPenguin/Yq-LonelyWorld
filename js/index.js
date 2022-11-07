@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+  // 文字依此弹出
   var labels = document.querySelectorAll(".form-control label");
   labels.forEach((label) => {
     label.innerHTML = label.innerHTML
