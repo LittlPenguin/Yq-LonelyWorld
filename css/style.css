@@ -1,0 +1,324 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?nmrv0k');
+  src: url('../fonts/icomoon.eot?nmrv0k#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?nmrv0k') format('truetype'),
+    url('../fonts/icomoon.woff?nmrv0k') format('woff'),
+    url('../fonts/icomoon.svg?nmrv0k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pencil:before {
+  content: "\e906";
+}
+
+.icon-user:before {
+  content: "\e907";
+}
+
+.icon-heart:before {
+  content: "\e908";
+}
+
+.icon-arrow-down:before {
+  content: "\e929";
+}
+
+.icon-enlarge:before {
+  content: "\e92a";
+}
+
+.icon-camera:before {
+  content: "\e012";
+}
+
+.icon-layers:before {
+  content: "\e031";
+}
+
+.icon-magnifying-glass:before {
+  content: "\e037";
+}
+
+.icon-cube:before {
+  content: "\e900";
+}
+
+.icon-box:before {
+  content: "\e903";
+}
+
+.icon-comments:before {
+  content: "\e909";
+}
+
+.icon-sun1:before {
+  content: "\e904";
+}
+
+.icon-moon:before {
+  content: "\e905";
+}
+
+.icon-switch:before {
+  content: "\e90a";
+}
+
+.icon-heart1:before {
+  content: "\e90b";
+}
+
+.icon-sentiment_satisfied_alt:before {
+  content: "\e90c";
+}
+
+.icon-home1:before {
+  content: "\e92b";
+}
+
+.icon-chevron-down:before {
+  content: "\e90d";
+}
+
+.icon-chevron-left:before {
+  content: "\e90e";
+}
+
+.icon-chevron-right:before {
+  content: "\e90f";
+}
+
+.icon-chevron-up:before {
+  content: "\e910";
+}
+
+.icon-download:before {
+  content: "\e911";
+}
+
+.icon-droplet:before {
+  content: "\e912";
+}
+
+.icon-github1:before {
+  content: "\e913";
+}
+
+.icon-phone-call:before {
+  content: "\e914";
+}
+
+.icon-power:before {
+  content: "\e915";
+}
+
+.icon-tag:before {
+  content: "\e916";
+}
+
+.icon-chat-alt-fill:before {
+  content: "\e917";
+}
+
+.icon-plus-alt:before {
+  content: "\e92c";
+}
+
+.icon-layers1:before {
+  content: "\e918";
+}
+
+.icon-user1:before {
+  content: "\e919";
+}
+
+.icon-cloud:before {
+  content: "\e91a";
+}
+
+.icon-rain:before {
+  content: "\e91b";
+}
+
+.icon-sun:before {
+  content: "\e901";
+}
+
+.icon-cloudy:before {
+  content: "\e902";
+}
+
+.icon-home:before {
+  content: "\e92d";
+}
+
+.icon-headphones:before {
+  content: "\e91c";
+}
+
+.icon-pacman:before {
+  content: "\e91d";
+}
+
+.icon-barcode:before {
+  content: "\e937";
+}
+
+.icon-qrcode:before {
+  content: "\e938";
+}
+
+.icon-happy:before {
+  content: "\e9df";
+}
+
+.icon-tongue:before {
+  content: "\e9e3";
+}
+
+.icon-grin:before {
+  content: "\e9e9";
+}
+
+.icon-cool:before {
+  content: "\e9eb";
+}
+
+.icon-evil2:before {
+  content: "\e9f0";
+}
+
+.icon-wondering:before {
+  content: "\e9fb";
+}
+
+.icon-crying2:before {
+  content: "\ea02";
+}
+
+.icon-point-up:before {
+  content: "\ea03";
+}
+
+.icon-point-right:before {
+  content: "\ea04";
+}
+
+.icon-point-down:before {
+  content: "\ea05";
+}
+
+.icon-point-left:before {
+  content: "\ea06";
+}
+
+.icon-google:before {
+  content: "\ea88";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-chrome:before {
+  content: "\ead9";
+}
+
+.icon-edge:before {
+  content: "\eadc";
+}
+
+.icon-tags:before {
+  content: "\f02c";
+}
+
+.icon-cubes:before {
+  content: "\f1b3";
+}
+
+.icon-tree:before {
+  content: "\f1bb";
+}
+
+.icon-baidu:before {
+  content: "\e91e";
+  color: #2319dc;
+}
+
+.icon-css3:before {
+  content: "\e91f";
+  color: #1572b6;
+}
+
+.icon-github2:before {
+  content: "\e920";
+}
+
+.icon-nintendoswitch:before {
+  content: "\e921";
+  color: #e60012;
+}
+
+.icon-opsgenie:before {
+  content: "\e922";
+}
+
+.icon-playstation:before {
+  content: "\e923";
+  color: #003791;
+}
+
+.icon-steam:before {
+  content: "\e924";
+}
+
+.icon-tencentqq:before {
+  content: "\e925";
+  color: #eb1923;
+}
+
+.icon-visualstudiocode:before {
+  content: "\e926";
+  color: #007acc;
+}
+
+.icon-wechat:before {
+  content: "\e927";
+  color: #7bb32e;
+}
+
+.icon-xbox:before {
+  content: "\e92e";
+  color: #107c10;
+}
+
+.icon-youtube:before {
+  content: "\e928";
+  color: #f00;
+}

@@ -2,13 +2,7 @@ window.addEventListener("load", () => {
   var labels = document.querySelectorAll(".form-control label");
   var ipt = document.querySelectorAll(".form-control input");
   labels.forEach((label) => {
-    label.innerHTML = label.innerHTML
-      .split("")
-      .map(
-        (letter, idx) =>
-          `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
-      )
-      .join("");
+    label.innerHTML = label.innerHTML.split("").map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`).join("");
   });
 
   //   文字焦点

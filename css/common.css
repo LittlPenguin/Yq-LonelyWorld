@@ -3,18 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     border-collapse: collapse;
+    user-select: none;
 }
 
-@font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?ebd5xy');
-    src: url('../fonts/icomoon.eot?ebd5xy#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?ebd5xy') format('truetype'),
-        url('../fonts/icomoon.woff?ebd5xy') format('woff'),
-        url('../fonts/icomoon.svg?ebd5xy#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+html {
+    margin: 0 auto;
+}
+
+body {
+    display: none;
 }
 
 ul {
@@ -33,3 +30,268 @@ a {
 input {
     outline: none;
 }
+
+/* 加载 */
+.loding {
+    z-index: 99999999999999999999999999999999999999999999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader-2 {
+    width: 195px;
+    height: 195px;
+    margin: 30px auto;
+    position: relative;
+    perspective: 97px;
+    transform-type: preserve-3d;
+    animation: loading-3 6.9s cubic-bezierrgb(0, 0, 0) infinite;
+}
+
+.loader-2 .loader-inner {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #a10702;
+    margin: -88px 0 0 -10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform-type: preserve-3d;
+    transform-origin: 50% 88px;
+    transform: rotateZ(30deg);
+    animation: loading-4 1.73s cubic-bezier(.6, 0, .4, 1) infinite;
+}
+
+.loader-2 .loader-inner:nth-child(2) {
+    background: #faa613;
+    transform: rotateZ(15deg);
+    animation-name: loading-5;
+    animation-delay: 172.5ms;
+}
+
+.loader-2 .loader-inner:nth-child(3) {
+    background: #688e26;
+    transform: rotateZ(0deg);
+    animation-name: loading-6;
+    animation-delay: 345ms;
+}
+
+.loader-2 .loader-inner:nth-child(4) {
+    background: #f44708;
+    transform: rotateZ(-15deg);
+    animation-name: loading-7;
+    animation-delay: 517.5ms;
+}
+
+.loader-2 .loader-inner:nth-child(5) {
+    background: #2e294e;
+    transform: rotateZ(-30deg);
+    animation-name: loading-8;
+    animation-delay: 690ms;
+}
+
+@keyframes loading-3 {
+    0% {
+        transform: rotateX(30deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(30deg) rotateZ(-360deg);
+    }
+}
+
+@keyframes loading-4 {
+    0% {
+        transform: rotateZ(30deg) rotateX(10deg);
+    }
+
+    95%,
+    100% {
+        transform: rotateZ(390deg) rotateX(10deg);
+    }
+}
+
+@keyframes loading-5 {
+    0% {
+        transform: rotateZ(15deg) rotateX(10deg);
+    }
+
+    95%,
+    100% {
+        transform: rotateZ(375deg) rotateX(10deg);
+    }
+}
+
+@keyframes loading-6 {
+    0% {
+        transform: rotateZ(0deg) rotateX(10deg);
+    }
+
+    95%,
+    100% {
+        transform: rotateZ(360deg) rotateX(10deg);
+    }
+}
+
+@keyframes loading-7 {
+    0% {
+        transform: rotateZ(-15deg) rotateX(10deg);
+    }
+
+    95%,
+    100% {
+        transform: rotateZ(345deg) rotateX(10deg);
+    }
+}
+
+@keyframes loading-8 {
+    0% {
+        transform: rotateZ(-30deg) rotateX(10deg);
+    }
+
+    95%,
+    100% {
+        transform: rotateZ(330deg) rotateX(10deg);
+    }
+}
+
+/* 加载结束 */
+/* 尾部开始 */
+body {
+    display: grid;
+    grid-template-rows: 1fr 10rem auto;
+    grid-template-areas: "main" "." "footer";
+    background: #F5F7FA;
+    overflow-x: hidden !important;
+}
+
+body .footer {
+    z-index: 1;
+    --footer-background: #ED5565;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+    margin-top: 400px;
+}
+
+body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+}
+
+body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+body .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+
+body .footer .content a,
+body .footer .content p {
+    color: #F5F7FA;
+    text-decoration: none;
+}
+
+body .footer .content b {
+    color: white;
+}
+
+body .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+body .footer .content>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body .footer .content>div>div {
+    margin: 0.25rem 0;
+}
+
+body .footer .content>div>div>* {
+    margin-right: 0.5rem;
+}
+
+body .footer .content>div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@-webkit-keyframes bubble-size {
+
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-size {
+
+    0%,
+    75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@-webkit-keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+/* 尾部结束 */
